@@ -3,23 +3,23 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Home | Socialdata 2025 - group 60 - assignment 2</title>
+<title>Home | 02806 Social Data Analysis and Visualization - Group 61 - Assignment 2</title>
 <meta name="generator" content="Jekyll v3.10.0" />
 <meta property="og:title" content="Home" />
 <meta property="og:locale" content="en_US" />
 <link rel="canonical" href="http://localhost:4000/socialdata2025-group60/" />
 <meta property="og:url" content="http://localhost:4000/socialdata2025-group60/" />
-<meta property="og:site_name" content="Socialdata 2025 - group 60 - assignment 2" />
+<meta property="og:site_name" content="02806 Social Data Analysis and Visualization - Group 61 - Assignment 2" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Home" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","headline":"Home","name":"Socialdata 2025 - group 60 - assignment 2","url":"http://localhost:4000/socialdata2025-group60/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","headline":"Home","name":"02806 Social Data Analysis and Visualization - Group 61 - Assignment 2","url":"http://localhost:4000/socialdata2025-group60/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/socialdata2025-group60/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/socialdata2025-group60/feed.xml" title="Socialdata 2025 - group 60 - assignment 2" /></head>
+<link rel="stylesheet" href="/socialdata2025-group60/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/socialdata2025-group60/feed.xml" title="02806 Social Data Analysis and Visualization - Group 61 - Assignment 2" /></head>
 <body><header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/socialdata2025-group60/">Socialdata 2025 - group 60 - assignment 2</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/socialdata2025-group60/">02806 Social Data Analysis and Visualization - Group 61 - Assignment 2</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -34,28 +34,74 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <!-- <h1>Socialdata 2025 - group 60 - assignment 2</h1> -->
+        <!-- <h1>02806 Social Data Analysis and Visualization - Group 61 - Assignment 2</h1> -->
 <!-- <p></p> -->
 
 <div>
-    <h1 id="introduction">Introduction</h1>
-<p>Crime data analysis involves examining spatial and temporal patterns to identify trends, hotspots, and correlations. To achieve this, data must first be cleaned and organized. When working with multiple datasets, such as crime reports and location-based statistics, merging them is a crucial step. This requires ensuring both CSV files share a common key, such as case numbers or timestamps. If necessary, data types should be standardized, missing values handled, and duplicate records resolved. Once merged, the data can be visualized and analyzed to extract meaningful insights that support informed decision-making.</p>
+    <ul>
+  <li>Bence Gattyán, s204773</li>
+  <li>João Diogo Silva Oliveira, s250263</li>
+  <li>Kristóf Muhi, s240194</li>
+</ul>
 
-<!-- TODO change the link -->
-<p>See more at <a href="SFPD_DataCombiner.ipynb">SFPD_DataCombiner.ipynb</a></p>
+<h1 id="introduction">Introduction</h1>
+
+<p>If my car is stolen in San Francisco, where should I look for it?</p>
+
+<blockquote>
+  <p>A look into crime statistics in Vehicle Theft from San Francisco</p>
+</blockquote>
+
+<p>Having your vehicle stolen can be devistating and you may feel at a loss and have no idea where to look for it.
+Luckily there some patterns can be seen on what might happen to it that could help you and the police find it.</p>
+
+<p>We are using data provided by the San Francisco Police department available at <a href="https://datasf.org/opendata/">https://datasf.org/opendata/</a></p>
+
+<p>On the websites you can find two datasets, one spanning the years 2003-2018 and one from 2018-present. See more at <a href="https://github.com/muhikristof/socialdata2025-group60/blob/main/assignment_2/SFPD_DataCombiner.ipynb">SFPD_DataCombiner.ipynb</a> <!-- TODO change the link --></p>
+
+<p>In these information about crimes committed is available, such as the time and date they occured, the location and police district, type of crime and an incident ID.</p>
+
+<p>Incident ID’s are used for submitting reports of crimes that have a connection to eachother, for example, if someone breaks into a house and steals something they get two reports submitted in the dataset, one about the breaking in and one about the theft itself.</p>
+
+<p>Another way Incident ID can connect reports is by linking them two from different time and place to the same crime, for example a car being stolen and later being found elsewhere.</p>
+
+<p>In this data story, we were interested in looking into what patterns emerge when we focus on reports relating to cars being stolen and found elsewhere later.</p>
 
 <h1 id="making-the-dataframe">Making the dataframe</h1>
 
-<p>the dataset is first filtered to retain only incidents with multiple records, ensuring duplicate reports from officers are correctly handled. The data is then sorted chronologically based on date and time.</p>
+<p>The dataset is first filtered to retain only incidents with multiple records, ensuring duplicate reports from officers are correctly handled. The data is then sorted chronologically based on date and time.</p>
 
 <p>To structure the dataset effectively, incidents are grouped by unique incident numbers, consolidating details such as timestamps, locations, crime categories, and district information. This transformation enables a clearer view of recurring incidents and their characteristics.</p>
 
 <p>A specific subset of the data focuses on vehicle-related crimes, particularly cases where a stolen vehicle is later found. Entries with missing geographic coordinates are removed, and location points are reorganized to track movement between the theft and recovery locations. This refined dataset allows for spatial analysis of vehicle theft patterns.</p>
 
 <!-- TODO change the link -->
-<p>See more at <a href="SFPD_DataCombiner.ipynb">Assignment2.ipynb</a></p>
+<p>See more at <a href="https://github.com/muhikristof/socialdata2025-group60/blob/main/assignment_2/Assignment2.ipynb">Assignment2.ipynb</a></p>
 
 <h1 id="charts">Charts</h1>
+<h2 id="heatmaps">Heatmaps</h2>
+
+<p>San Francisco is broken up into 10 police districts governing how police officers get deployed and from what police center.</p>
+
+<p>Below you can see a heatmap visualizing where stolen cars end up depending on the location they were stolen from:</p>
+
+<p><img src="/socialdata2025-group60/assets/images/heatmaps.png" alt="Heatmaps" /></p>
+
+<p>The police district is enclosed by a blue line and the amount of cars is illustrated by colour, increasing from the minimum blue -&gt; green -&gt; yellow -&gt; red to the maximum.</p>
+
+<p>From this we can find two patterns.</p>
+
+<ol>
+  <li>Stolen cars are more often found near their original location of theft rather then far away.</li>
+  <li>Cars are more likely to be found on the east side of the city and the city center.</li>
+</ol>
+
+<p>A possible explanation to this could be that the cars that have been found were only stolen for short term use and not for resale or salvaging for parts.</p>
+
+<p>The eastern side of the city and especially downtown are more scenic that the west which may lead to joyriders travelling there and leaving the vehicle there.</p>
+
+<p>San Francisco also automatic license plate reader cameras installed which make it hard to stay undetected in a stolen vehicle for long potentially leading to car thiefs preferring to not drive very far.</p>
+
 <h2 id="polar-charts">Polar charts</h2>
 
 <p>This visualization explores the directional patterns of vehicle theft by analyzing where stolen cars from each district were later found. Each subplot represents a different district and displays the distribution of movement directions using a polar histogram. The angles correspond to the directions in which stolen vehicles were recovered relative to their theft locations.</p>
@@ -73,12 +119,12 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Socialdata 2025 - group 60 - assignment 2</h2>
+    <h2 class="footer-heading">02806 Social Data Analysis and Visualization - Group 61 - Assignment 2</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">Socialdata 2025 - group 60 - assignment 2</li><li><a class="u-email" href="mailto:s240194@dtu.dk">s240194@dtu.dk</a></li></ul>
+          <li class="p-name">02806 Social Data Analysis and Visualization - Group 61 - Assignment 2</li><li><a class="u-email" href="mailto:s240194@dtu.dk">s240194@dtu.dk</a></li></ul>
       </div>
 
       <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>

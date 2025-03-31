@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Socialdata 2025 - group 60 - assignment 2
+title: 02806 Social Data Analysis and Visualization - Group 61 - Assignment 2
 email: s240194@dtu.dk
 description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/socialdata2025-group60" # the subpath of your site, e.g. /blog
