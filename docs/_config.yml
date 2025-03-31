@@ -31,6 +31,25 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Set a static page as the homepage
+permalink: pretty
+collections:
+pages:
+  output: true
+  permalink: /:path/
+
+# Define homepage settings
+defaults:
+- scope:
+    path: ""
+    type: "pages"
+  values:
+    layout: "home"
+
+# header_pages:
+#   - index.md
+#   - home.md
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

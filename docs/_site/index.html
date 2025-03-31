@@ -3,20 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Socialdata 2025 - group 60 - assignment 2</title>
+<title>Home | Socialdata 2025 - group 60 - assignment 2</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Socialdata 2025 - group 60 - assignment 2" />
+<meta property="og:title" content="Home" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="https://muhikristof.github.io/socialdata2025-group60/" />
-<meta property="og:url" content="https://muhikristof.github.io/socialdata2025-group60/" />
+<link rel="canonical" href="http://localhost:4000/socialdata2025-group60/" />
+<meta property="og:url" content="http://localhost:4000/socialdata2025-group60/" />
 <meta property="og:site_name" content="Socialdata 2025 - group 60 - assignment 2" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Socialdata 2025 - group 60 - assignment 2" />
+<meta property="twitter:title" content="Home" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","headline":"Socialdata 2025 - group 60 - assignment 2","name":"Socialdata 2025 - group 60 - assignment 2","url":"https://muhikristof.github.io/socialdata2025-group60/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","headline":"Home","name":"Socialdata 2025 - group 60 - assignment 2","url":"http://localhost:4000/socialdata2025-group60/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/socialdata2025-group60/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://muhikristof.github.io/socialdata2025-group60/feed.xml" title="Socialdata 2025 - group 60 - assignment 2" /></head>
+<link rel="stylesheet" href="/socialdata2025-group60/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/socialdata2025-group60/feed.xml" title="Socialdata 2025 - group 60 - assignment 2" /></head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/socialdata2025-group60/">Socialdata 2025 - group 60 - assignment 2</a><nav class="site-nav">
@@ -29,22 +29,44 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/socialdata2025-group60/about/">About</a></div>
+        <div class="trigger"><a class="page-link" href="/socialdata2025-group60/">Home</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
-<h2 class="post-list-heading">Posts</h2>
-    <ul class="post-list"><li><span class="post-meta">Mar 30, 2025</span>
-        <h3>
-          <a class="post-link" href="/socialdata2025-group60/jekyll/update/2025/03/30/welcome-to-jekyll.html">
-            Welcome to Jekyll!
-          </a>
-        </h3></li></ul>
+        <!-- <h1>Socialdata 2025 - group 60 - assignment 2</h1> -->
+<!-- <p></p> -->
 
-    <p class="rss-subscribe">subscribe <a href="/socialdata2025-group60/feed.xml">via RSS</a></p></div>
+<div>
+    <h1 id="introduction">Introduction</h1>
+<p>Crime data analysis involves examining spatial and temporal patterns to identify trends, hotspots, and correlations. To achieve this, data must first be cleaned and organized. When working with multiple datasets, such as crime reports and location-based statistics, merging them is a crucial step. This requires ensuring both CSV files share a common key, such as case numbers or timestamps. If necessary, data types should be standardized, missing values handled, and duplicate records resolved. Once merged, the data can be visualized and analyzed to extract meaningful insights that support informed decision-making.</p>
 
+<!-- TODO change the link -->
+<p>See more at <a href="SFPD_DataCombiner.ipynb">SFPD_DataCombiner.ipynb</a></p>
+
+<h1 id="making-the-dataframe">Making the dataframe</h1>
+
+<p>the dataset is first filtered to retain only incidents with multiple records, ensuring duplicate reports from officers are correctly handled. The data is then sorted chronologically based on date and time.</p>
+
+<p>To structure the dataset effectively, incidents are grouped by unique incident numbers, consolidating details such as timestamps, locations, crime categories, and district information. This transformation enables a clearer view of recurring incidents and their characteristics.</p>
+
+<p>A specific subset of the data focuses on vehicle-related crimes, particularly cases where a stolen vehicle is later found. Entries with missing geographic coordinates are removed, and location points are reorganized to track movement between the theft and recovery locations. This refined dataset allows for spatial analysis of vehicle theft patterns.</p>
+
+<!-- TODO change the link -->
+<p>See more at <a href="SFPD_DataCombiner.ipynb">Assignment2.ipynb</a></p>
+
+<h1 id="charts">Charts</h1>
+<h2 id="polar-charts">Polar charts</h2>
+
+<p>This visualization explores the directional patterns of vehicle theft by analyzing where stolen cars from each district were later found. Each subplot represents a different district and displays the distribution of movement directions using a polar histogram. The angles correspond to the directions in which stolen vehicles were recovered relative to their theft locations.</p>
+
+<p>By plotting these distributions, we can identify trends in vehicle movement after theft—such as whether stolen cars are typically recovered in specific directions. This analysis can provide insights into crime patterns and potentially inform law enforcement strategies for vehicle theft prevention.</p>
+
+<p><img src="/socialdata2025-group60/assets/images/polars.png" alt="Polar charts" /></p>
+
+<!-- ![Alt text](/socialdata2025-group60/assets/images/polars.png) -->
+
+</div>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/socialdata2025-group60/"></data>
