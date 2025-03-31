@@ -18,7 +18,7 @@ Luckily there some patterns can be seen on what might happen to it that could he
 
 We are using data provided by the San Francisco Police department available at [https://datasf.org/opendata/](https://datasf.org/opendata/)
 
-On the websites you can find two datasets, one spanning the years 2003-2018 and one from 2018-present. See more at [SFPD_DataCombiner.ipynb](https://github.com/muhikristof/socialdata2025-group60/blob/main/assignment_2/SFPD_DataCombiner.ipynb) <!-- TODO change the link -->
+On the websites you can find two datasets, one spanning the years 2003-2018 and one from 2018-present. See more at [SFPD_DataCombiner.ipynb](https://github.com/muhikristof/socialdata2025-group60/blob/main/assignment_2/SFPD_DataCombiner.ipynb)
 
 
 In these information about crimes committed is available, such as the time and date they occured, the location and police district, type of crime and an incident ID.
@@ -37,7 +37,6 @@ To structure the dataset effectively, incidents are grouped by unique incident n
 
 A specific subset of the data focuses on vehicle-related crimes, particularly cases where a stolen vehicle is later found. Entries with missing geographic coordinates are removed, and location points are reorganized to track movement between the theft and recovery locations. This refined dataset allows for spatial analysis of vehicle theft patterns.
 
-<!-- TODO change the link -->
 See more at [Assignment2.ipynb](https://github.com/muhikristof/socialdata2025-group60/blob/main/assignment_2/Assignment2.ipynb)
 
 # Charts
@@ -70,4 +69,8 @@ By plotting these distributions, we can identify trends in vehicle movement afte
 
 ![Polar charts](/assets/images/polars.png)
 
-<!-- ![Alt text](/assets/images/polars.png) -->
+## Bokeh plot
+
+This interactive plot allows users to select a district where vehicles were stolen and visually explore the number of vehicles that were found in each district. The x-axis represents the districts where the stolen cars were recovered, while the y-axis shows the number of vehicles found in each of those districts. Additionally, by hovering over the bars in the plot, users can view the average distance each stolen vehicle traveled before being recovered, providing insights into the distances covered by stolen cars.
+
+<iframe src="assets/plots/bokeh_plot.html" width="100%" height="700px"></iframe>
