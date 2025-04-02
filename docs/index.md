@@ -74,3 +74,13 @@ By plotting these distributions, we can identify trends in vehicle movement afte
 This interactive plot allows users to select a district where vehicles were stolen and visually explore the number of vehicles that were found in each district. The x-axis represents the districts where the stolen cars were recovered, while the y-axis shows the number of vehicles found in each of those districts. Additionally, by hovering over the bars in the plot, users can view the average distance each stolen vehicle traveled before being recovered, providing insights into the distances covered by stolen cars.
 
 <iframe src="assets/plots/bokeh_plot.html" width="100%" height="700px"></iframe>
+
+## Contributions
+
+| Person | Assigned task |
+|:----------|:----------|
+| Bence Gattyan | Researching for possible data story |
+| Bence Gattyan | Heatmaps |
+| João Diogo Silva Oliveira | Bokeh plot |
+| Kristof Muhi | Polar charts |
+| Kristof Muhi | Making the website in Github Pages |
